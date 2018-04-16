@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Mensageiro</string>
+    <string name="destinatario">Destinatário</string>
+    <string name="remetente">Remetente</string>
+    <string name="remetente_hint">Digite o ID do remetente</string>
+    <string name="destinatatario_hint">Digite o ID do destinatário</string>
+    <string name="assunto">Assunto</string>
+    <string name="assunto_hint">Digite o assunto da mensagem</string>
+    <string name="mensagem">Mensagem</string>
+    <string name="mensagem_hint">Digite o texto da mensagem</string>
+    <string name="enviar">Enviar</string>
+    <string name="ultima_mensagem">Última mensagem lida</string>
+    <string name="ultima_mensagem_hint">Digite o ID da última mensagem</string>
+    <string name="ler">Ler</string>
+    <string name="novo_contato_adicionado">Um novo contato foi adicionado!</string>
+    <string name="novo_contato">Novo contato</string>
+    <string name="contatos_atualizados">Contatos atualizados!</string>
+    <string name="clique_aqui">Clique aqui para visualizar</string>
+    <string name="nome_do_contato">Nome do contato</string>
+    <string name="apelido">Apelido</string>
+    <string name="cadastrar">Cadastrar</string>
+</resources>

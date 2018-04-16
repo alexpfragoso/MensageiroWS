@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_nome_contato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nome_do_contato"/>
+    <EditText
+        android:id="@+id/et_nome_novo_contato_adicionado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/novo_contato"/>
+    <TextView
+        android:id="@+id/tv_nome_apelido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apelido"/>
+    <EditText
+        android:id="@+id/et_apelido_novo_contato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/apelido"/>
+
+    <Button
+        android:id="@+id/bt_cadastrar_novo_contato"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/cadastrar"/>
+
+</LinearLayout>
