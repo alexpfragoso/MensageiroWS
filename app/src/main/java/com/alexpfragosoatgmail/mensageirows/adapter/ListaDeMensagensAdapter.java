@@ -52,6 +52,8 @@ public class ListaDeMensagensAdapter extends ArrayAdapter<Mensagem>{
 
             holder.tvMensagemRemetente =(TextView)convertView.findViewById(R.id.tv_mensagem_remetente);
             holder.tvMensagemDestinatario = (TextView)convertView.findViewById(R.id.tv_mensagem_destinatario);
+            holder.tvMensagemRemetenteBalao =(TextView)convertView.findViewById(R.id.tv_mensagem_remetente_balao);
+            holder.tvMensagemDestinatarioBalao = (TextView)convertView.findViewById(R.id.tv_mensagem_destinatario_balao);
             convertView.setTag(holder);
         }
         else{
@@ -63,13 +65,17 @@ public class ListaDeMensagensAdapter extends ArrayAdapter<Mensagem>{
         if(mensagem.getOrigemId().equals(idOrigem)){
 
             holder.tvMensagemDestinatario.setVisibility(View.VISIBLE);
-            holder.tvMensagemDestinatario.setText(" " +mensagem.getOrigem().getApelido() + ":\n " + mensagem.getCorpo());
+            holder.tvMensagemDestinatarioBalao.setVisibility(View.VISIBLE);
+            holder.tvMensagemDestinatario.setText("  " +mensagem.getOrigem().getApelido() + "\n   " + mensagem.getCorpo());
             holder.tvMensagemRemetente.setVisibility(View.GONE);
+            holder.tvMensagemRemetenteBalao.setVisibility(View.GONE);
         }else{
 
             holder.tvMensagemRemetente.setVisibility(View.VISIBLE);
-            holder.tvMensagemRemetente.setText(" " + mensagem.getOrigem().getApelido() + ":\n " + mensagem.getCorpo());
+            holder.tvMensagemRemetenteBalao.setVisibility(View.VISIBLE);
+            holder.tvMensagemRemetente.setText("  " + mensagem.getOrigem().getApelido() + "\n   " + mensagem.getCorpo());
             holder.tvMensagemDestinatario.setVisibility(View.GONE);
+            holder.tvMensagemDestinatarioBalao.setVisibility(View.GONE);
         }
 
 
@@ -80,6 +86,8 @@ public class ListaDeMensagensAdapter extends ArrayAdapter<Mensagem>{
     private static class Holder{
         public TextView tvMensagemRemetente;
         public TextView tvMensagemDestinatario;
+        public TextView tvMensagemRemetenteBalao;
+        public TextView tvMensagemDestinatarioBalao;
 
     }
 }

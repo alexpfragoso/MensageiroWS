@@ -14,21 +14,22 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <!-- android:theme="@style/AppTheme"> -->
-        <activity android:name=".view.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".view.MainActivity"/>
         <activity android:name=".view.EnviarActivity" />
         <activity android:name=".view.LerActivity" />
         <activity android:name=".view.MostrarMensagensActivity" />
         <activity android:name=".view.NovoContatoActivity" />
         <activity android:name=".view.CadastrarNovoContatoActivity" />
         <activity android:name=".view.LerMensagensOrdenadasActivity" />
-        <activity android:name=".view.MostrarMensagensOrdenadasActivity" />
-        <activity android:name=".view.TelaLoginActivity" />
+        <activity android:name=".view.MostrarMensagensOrdenadasActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".view.TelaLoginActivity" >
+            <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+        </activity>>
 
         <meta-data
             android:name="preloaded_fonts"
