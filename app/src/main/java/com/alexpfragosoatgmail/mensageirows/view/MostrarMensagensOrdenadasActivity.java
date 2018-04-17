@@ -63,10 +63,38 @@ public class MostrarMensagensOrdenadasActivity extends AppCompatActivity impleme
 
         listaMensagensAL = (ArrayList<Mensagem>) getIntent().getSerializableExtra(getString(R.string.mensagens_string_array_extra));
 
-        arrayAdapter = new ListaDeMensagensAdapter(this,(List<Mensagem>) listaMensagensAL);
+        try {
 
-        mostrarMensagensLv.setAdapter(arrayAdapter);
-        mostrarMensagensLv.setSelection(listaMensagensAL.size());
+                arrayAdapter = new ListaDeMensagensAdapter(this,(List<Mensagem>) listaMensagensAL);
+                mostrarMensagensLv.setAdapter(arrayAdapter);
+                mostrarMensagensLv.setSelection(listaMensagensAL.size());
+
+            }catch (Exception e){
+
+                listaMensagensAL = new ArrayList<Mensagem>();
+                Mensagem mensagemVazia = new Mensagem();
+                mensagemVazia.setCorpo("");
+                mensagemVazia.setId("9999");
+                mensagemVazia.setAssunto("");
+                mensagemVazia.setDestinoId(contato.getId());
+                mensagemVazia.setOrigemId("3");
+                mensagemVazia.setOrigem(contato);
+                mensagemVazia.setDestino(contato);
+                listaMensagensAL.add(mensagemVazia);
+                listaMensagensAL.add(mensagemVazia);
+
+                arrayAdapter = new ListaDeMensagensAdapter(this,(List<Mensagem>) listaMensagensAL);
+                mostrarMensagensLv.setAdapter(arrayAdapter);
+                mostrarMensagensLv.setSelection(listaMensagensAL.size());
+
+            }
+
+
+
+
+
+
+
 
         enviarMensagemBT = (Button)findViewById(R.id.bt_enviar_mensagem);
         enviarMensagemBT.setOnClickListener(this);

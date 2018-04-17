@@ -39,6 +39,7 @@ public class ContatosActivity extends AppCompatActivity implements View.OnClickL
     private String idAmigo = "1";
     private String apelidoContato = "Contato";
     private Contato contato;
+    private Intent mostraMensagensIntent;
 
 
     private Gson gson;
@@ -146,21 +147,30 @@ public class ContatosActivity extends AppCompatActivity implements View.OnClickL
 
                                 List<Mensagem> listaMensagens2 = response.body();
 
-                                for (Mensagem mensagem : listaMensagens2) {
-                                    listaMensagensFinal.add(mensagem);
 
-                                }
 
-                                //ORDENANDO LIST DE MENSAGENS
 
-                                Collections.sort(listaMensagensFinal);
 
-                                ArrayList<Mensagem> listaMensagensAL;
-                                listaMensagensAL = (ArrayList<Mensagem>) listaMensagensFinal;
+                                    for (Mensagem mensagem : listaMensagens2) {
+                                        listaMensagensFinal.add(mensagem);
 
-                                Intent mostraMensagensIntent = new Intent(ContatosActivity.this, MostrarMensagensOrdenadasActivity.class);
-                                mostraMensagensIntent.putExtra("contato",contato);
-                                mostraMensagensIntent.putExtra(getString(R.string.mensagens_string_array_extra), listaMensagensAL);
+                                    }
+
+                                    //ORDENANDO LIST DE MENSAGENS
+
+                                    Collections.sort(listaMensagensFinal);
+
+                                    ArrayList<Mensagem> listaMensagensAL;
+                                    listaMensagensAL = (ArrayList<Mensagem>) listaMensagensFinal;
+
+                                    mostraMensagensIntent = new Intent(ContatosActivity.this, MostrarMensagensOrdenadasActivity.class);
+                                    mostraMensagensIntent.putExtra("contato",contato);
+                                    mostraMensagensIntent.putExtra(getString(R.string.mensagens_string_array_extra), listaMensagensAL);
+
+
+
+
+
                                 startActivity(mostraMensagensIntent);
                             }
 

@@ -66,14 +66,15 @@ public class ListaDeMensagensAdapter extends ArrayAdapter<Mensagem>{
 
             holder.tvMensagemDestinatario.setVisibility(View.VISIBLE);
             holder.tvMensagemDestinatarioBalao.setVisibility(View.VISIBLE);
-            holder.tvMensagemDestinatario.setText("  " +mensagem.getOrigem().getApelido() + "\n   " + mensagem.getCorpo());
+            holder.tvMensagemDestinatario.setText(mensagem.getCorpo());
             holder.tvMensagemRemetente.setVisibility(View.GONE);
             holder.tvMensagemRemetenteBalao.setVisibility(View.GONE);
         }else{
 
             holder.tvMensagemRemetente.setVisibility(View.VISIBLE);
             holder.tvMensagemRemetenteBalao.setVisibility(View.VISIBLE);
-            holder.tvMensagemRemetente.setText("  " + mensagem.getOrigem().getApelido() + "\n   " + mensagem.getCorpo());
+           // holder.tvMensagemRemetente.setText("  " + mensagem.getOrigem().getApelido() + "\n   " + mensagem.getCorpo());
+            holder.tvMensagemRemetente.setText(mensagem.getCorpo());
             holder.tvMensagemDestinatario.setVisibility(View.GONE);
             holder.tvMensagemDestinatarioBalao.setVisibility(View.GONE);
         }
